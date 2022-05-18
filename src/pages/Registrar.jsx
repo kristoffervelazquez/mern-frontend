@@ -33,7 +33,7 @@ const Registrar = () => {
 		// Crear el usuario en la API
 
 		try {
-			await clienteAxios.post('/api/veterinarios', {nombre, email, password});
+			await clienteAxios.post('/veterinarios', {nombre, email, password});
 			setAlerta({msg: 'Cuenta creada correctamente, revisa tu email', error: false})
 
 			// Se resetean los campos
@@ -84,7 +84,7 @@ const Registrar = () => {
 					</div>
 					<div className="my-5">
 						<label className="uppercase text-gray-600 block text-xl font-bold">
-							Confrimar password
+							Confirmar password
 						</label>
 						<input value={confirmarPassword} onChange={e => setConfirmarPassword(e.target.value)} className="border w-full p-3 mt-3 bg-gray-50 rounded-xl" type="password" placeholder="Confirma tu Password" name="password" />
 					</div>
