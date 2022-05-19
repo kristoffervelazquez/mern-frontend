@@ -19,7 +19,7 @@ const Header = () => {
 
                 <nav className='flex flex-col items-center lg:flex-row gap-4 mt-5 lg:mt-0'>
                     <Link to='/admin' className="text-white text-sm uppercase font-bold hover:text-indigo-200">Pacientes</Link>
-                    <Link to='/perfil' className="text-white text-sm uppercase font-bold hover:text-indigo-200">Perfil</Link>
+                    <Link to='/admin/perfil' className="text-white text-sm uppercase font-bold hover:text-indigo-200">Perfil</Link>
 
                     <button onClick={ () => {cerrarSesion(), limpiarPacientes()} } type='button' className="text-white text-sm uppercase font-bold hover:text-red-400">Cerrar Sesión</button>
                 </nav>
