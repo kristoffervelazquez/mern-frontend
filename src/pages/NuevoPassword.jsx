@@ -45,8 +45,6 @@ const NuevoPassword = () => {
             const { data } = await clienteAxios.post(url, { password });
             setAlerta({ msg: data.msg });
 
-            console.log(data)
-
             setPassword('');
             setConfirmarPassword('');
             setTokenValido(false);
