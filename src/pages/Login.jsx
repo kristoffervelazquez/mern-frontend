@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import useAuth from '../hooks/useAuth'
 import clienteAxios from '../config/axios'
 import Alerta from '../components/Alerta'
+import Footer from '../components/Footer'
 
 const Login = () => {
 
@@ -63,8 +64,14 @@ const Login = () => {
                     <Link className="block text-center my-5 text-gray-500 font-medium hover:underline hover:font-semibold" to="/registrar">¿No tienes una cuenta? Registrate!</Link>
                     <Link className="block text-center my-5 text-gray-500 font-medium hover:underline hover:font-semibold" to="/olvide-password">Olvide mi password</Link>
                 </nav>
+                
             </div>
 
+            <footer className="mt-10 text-xl lg:pr-7">
+                <Footer/>
+            </footer>
+
+            
         </>
     )
 }
