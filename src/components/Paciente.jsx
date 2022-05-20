@@ -8,8 +8,14 @@ const Paciente = (props) => {
 
     const formatearFecha = (fecha) => {
         const nuevaFecha = new Date(fecha)
+        let fechaActualizada = new Intl.DateTimeFormat('es-US', { dateStyle: 'long' }).format(nuevaFecha);
 
-        return new Intl.DateTimeFormat('es-MX', { dateStyle: 'long' }).format(nuevaFecha)
+        // Se toman el dia y se le suma 1
+        const dia = parseInt(fechaActualizada.slice(0, 2))+1;
+        fechaActualizada = `${dia} ${fechaActualizada.slice(2)}`
+
+        return fechaActualizada
+
     }
 
     const {setEdicion, eliminarPaciente} = usePacientes();
